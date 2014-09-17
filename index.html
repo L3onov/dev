@@ -13,9 +13,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.data.cv.name }}'s CV</title>
-    <meta name="author" content="{{ site.data.cv.name }}"/>
-    <meta name="description" content="{{ site.data.cv.name }}'s CV"/>
+    <title>{{ site.data.resume.name }}'s Resume</title>
+    <meta name="author" content="{{ site.data.resume.name }}"/>
+    <meta name="description" content="{{ site.data.resume.name }}'s CV"/>
     <link rel="shortcut icon" href="/favicon.png">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet" media="all"/>
     <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
@@ -44,24 +44,24 @@
 </head>
 <body>
 <div class="container">
-    <div class="text-center nohref"><h1>{{ site.data.cv.name }}</h1>
-        <span class="glyphicon glyphicon-home"></span><a href="http://{{ site.data.cv.home }}"> {{ site.data.cv.home }}</a><br/>
-        <span class="glyphicon glyphicon-envelope"></span><a href="mailto:{{ site.data.cv.email }}"> {{ site.data.cv.email }}</a>
+    <div class="text-center nohref"><h1>{{ site.data.resume.name }}</h1>
+        <span class="glyphicon glyphicon-home"></span><a href="http://{{ site.data.resume.home }}"> {{ site.data.resume.home }}</a><br/>
+        <span class="glyphicon glyphicon-envelope"></span><a href="mailto:{{ site.data.resume.email }}"> {{ site.data.resume.email }}</a>
     </div>
 
     <h2>Summary</h2>
-    <p> {{ site.data.cv.summary.text }}</p>
+    <p> {{ site.data.resume.summary.text }}</p>
 
     <hr/>
 
     <h2>Objective</h2>
-    <p> {{ site.data.cv.objective.text }}</p>
+    <p> {{ site.data.resume.objective.text }}</p>
 
     <hr/>
 
     <h2>Skills Focus and Technical Expertise</h2>
 
-    {% for skill in site.data.cv.skills %}
+    {% for skill in site.data.resume.skills %}
 
     <h5>{{ skill.name }}</h5>
     {% for item in skill.items %}
@@ -74,7 +74,7 @@
 
     <h2>Professional Experience</h2>
 
-    {% for item in site.data.cv.professional %}
+    {% for item in site.data.resume.professional %}
     <div class="row">
         <div class="col-xs-6 nohref"><h3><a href="{{ item.link }}"><strong>{{ item.name }}</strong></a>
         </h3>
@@ -121,7 +121,7 @@
     <hr/>
 
     <h2>Education</h2>
-    {% for college in site.data.cv.education.colleges %}
+    {% for college in site.data.resume.education.colleges %}
     <h3><a href="{{ college.link }}"><strong>{{ college.name }}</strong></a></h3>
     <h4><em>{{ college.degree }}, {{ college.year }}</em></h4>
     {% endfor %}
@@ -129,14 +129,24 @@
     <hr/>
 
     <h2>Certifications and Awards</h2>
-    {% for item in site.data.cv.certsAndAwards %}
+    {% for item in site.data.resume.certsAndAwards %}
     <h4>{{ item.name }}, {{ item.year }}</h4>
     {% endfor %}
 
     <hr/>
 
     <h2>Clearances</h2>
-    <h4>{{ site.data.cv.clearance.name }}</h4>
+    <h4>{{ site.data.resume.clearance.name }}</h4>
+
+    <ul>
+    {% for member in site.data.members %}
+      <li>
+        <a href="https://github.com/{{ member.github }}">
+          {{ member.name }}
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
 
 </div>
 
