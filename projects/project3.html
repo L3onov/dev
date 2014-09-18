@@ -1,0 +1,28 @@
+﻿<div class="image fl">
+	<div class="slider-wrapper theme-default">
+         <div id="slider" class="nivoSlider">
+             <img src="./img/projects/pro1.jpg" alt="Project name 1" />
+             <img src="./img/projects/pro1.jpg" alt="Project name 1" />
+             <img src="./img/projects/pro1.jpg" alt="Project name 1" />
+         </div>
+     </div>
+</div>
+<div class="more fl">
+	<h4>Nivo slider -  no scroll</h4>
+	<h5>About:</h5>
+	<p class="moretext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	<h5>Work:</h5>
+	<p class="moretext">CMS development, design changes and some custom jQuery work</p>
+	</div>
+<!-- Clear floats -->
+<div class="cBoth"></div>
+<script>
+$(function()
+{
+	$('.more').jScrollPane();
+});
+// Nivo slider
+$(function() {
+    $('#slider').nivoSlider();
+});
+</script>

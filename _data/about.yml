@@ -1,0 +1,55 @@
+name: Leonov Aleksei
+home: l3onov.com
+email: l3onov.public@gmail.com
+
+summary:
+ text: Professional UNIX/Linux System Administrator/Analyst
+ # Magic maker and a hero of yours.
+
+objective:
+ text: Seeking to contribute blood, sweat, and tears. That is all.
+
+address:
+  text: Colorado Springs, CO
+
+phone:
+  text: +1 (719) 266-2345
+
+map:
+  url: <img src="http://maps.googleapis.com/maps/api/staticmap?center=Colorado+Springs,CO&zoom=10&size=202x142&sensor=false">
+
+skills:
+ - name: Languages
+   items:
+    - name: JavaScript
+    - name: Python
+    - name: Java
+    - name: C++
+    - name: SQL
+ - name: Backend
+   items:
+    - name: Node
+    - name: Django
+
+professional:
+ - name: Acme Inc.
+   link: http://acme.com
+   location: Nowhere, NY
+   start: 10/1979
+   end: Present
+   title: Code Monkey
+   summary: Been on this sinking ship since before the internet.
+   projects:
+
+    - name: Koala DSP
+      description: Implemented a unique DSP algorithm to mimic koala bears.
+      skills:
+       - Hardcore C
+       - Hardcore DSP
+
+    - name: First Company Website
+      link: http://acme.com/
+      description: Learned HTML and rocked everyone's world.
+      skills:
+       - HTML
+       - Not CSS

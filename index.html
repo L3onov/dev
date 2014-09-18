@@ -10,147 +10,280 @@
 <html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html lang="en"> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.data.resume.name }}'s Resume</title>
-    <meta name="author" content="{{ site.data.resume.name }}"/>
-    <meta name="description" content="{{ site.data.resume.name }}'s Resume"/>
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet" media="all"/>
-    <link href='http://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
-    <style>
-        h1 {
-            font-family: 'Lusitana', serif;
-            font-size: 5em;
-        }
+    <head>
+        <meta charset="utf-8">
+        <title>About me</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="nivo-slider.css">
+        <link rel="stylesheet" href="themes/default/default.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet'>
+        <script src="js/jquery-1.6.2.min.js"></script>
+        <script src="js/tools.js"></script>
+        <script src="js/jquery.mousewheel.js"></script>
+        <script src="js/jquery.jscrollpane.min.js"></script>
+        <script src="js/jquery.nivo.slider.pack.js"></script>
+    </head>
+    <body>
+        <div id="top"></div>
+        <div id="wrapper">
+          <!-- Navigation (left div)-->
+          <div id="navigation">
+            <ul class="nav">
+              <li><a href="#"><img src="img/dash6.png" alt="Dashboard" />Dashboard</a></li>
+              <li><a href="#"><img src="img/about.png" alt="About me" />About me</a></li>
+              <li><a href="#"><img src="img/works.png" alt="My projects" />My projects</a></li>
+              <li><a href="#"><img src="img/contact.png" alt="Contact me" />Contact me</a></li>
+            </ul>
+          </div>
+          <!-- Project content and bigger image will be displayed inside of  contentWrap div -->
+              <div class="apple_overlay" id="overlay">
 
-        .skills {
-            margin-right: 1em;
-        }
+                <div class="contentWrap"></div>
 
-        @media print {
-            /* In case you don't want the boxes on your printout... */
-            /*.label {*/
-            /*border: none;*/
-            /*}*/
+              </div>
+          <div class="panes clearfix" id="container">
+            <!-- Dashboard tab -->
+            <div>
 
-            /* Avoid printing hrefs when this class is applied */
-            .nohref a[href]:after {
-                content: "";
-            }
-        }
-    </style>
-</head>
-<body>
-<div class="container">
-    <div class="text-center nohref"><h1>{{ site.data.resume.name }}</h1>
-        <span class="glyphicon glyphicon-home"></span><a href="http://{{ site.data.resume.home }}"> {{ site.data.resume.home }}</a><br/>
-        <span class="glyphicon glyphicon-envelope"></span><a href="mailto:{{ site.data.resume.email }}"> {{ site.data.resume.email }}</a>
-    </div>
+              <div id="title">
+                <h1>Welcome, I am {{ site.data.about.name }}.</h1>
+                <h2>{{ site.data.about.summary.text }}.</h2>
+                <!-- <p class="free">Buzymeter</p> -->
+              </div>
+              <!-- <div id="buzymeter"> -->
+                <!-- <div class="bmLoader"></div> -->
+              <!-- </div> -->
+              <p class="bm">Working on client project, but feel free to contact me.</p>
+            </div>
+            <!-- About me tab -->
+            <div>
+              <div id="aboutMe">
+                  <img src="img/aboutme.jpg" alt="My image" />
+                  <h3>About me</h3>
+                  <p>Lorem ipsum dolor sit amet, <span>consectetur adipisicing</span> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. <a href="about.html" rel="#overlay">... read more.</a></p>
+                </div>
+              <div id="mySkills">
 
-    <h2>Summary</h2>
-    <p> {{ site.data.resume.summary.text }}</p>
+                <ul class="skills fl">
+                  <li>HTML/CSS <img src="img/5cogs.png" alt="Rating 5" /></li>
+                  <li>Javascript <img src="img/3cogs.png" alt="Rating 3" /></li>
+                  <li>PHP <img src="img/4cogs.png" alt="Rating 4" /></li>
+                  <li>Designing <img src="img/5cogs.png" alt="Rating 5" /></li>
+                  <li>Dreamweaver <img src="img/5cogs.png" alt="Rating 5" /></li>
+                  <li>Photoshop <img src="img/5cogs.png" alt="Rating 5" /></li>
+                  <li>Illustrator <img src="img/4cogs.png" alt="Rating 4" /></li>
+                </ul>
 
-    <hr/>
+                <ul class="socialIcons">
+                    <li><a href="https://www.facebook.com/aleksei.leonov.019"><img src="img/social/facebook.png" alt="Facebook" />Facebook</a></li>
+                    <li><a href="https://twitter.com/BersPublic"><img src="img/social/twitter.png" alt="Twitter" />Twitter</a></li>
+                    <!-- <li><a href="#"><img src="img/social/google-plus.png" alt="Google+" />Google+</a></li> -->
+                    <li><a href="skype:bersbad?userinfo"><img src="img/social/skype.png" alt="Skype" />Skype</a></li>
+                    <li><a href="https://www.linkedin.com/profile/view?id=160404896"><img src="img/social/linkedin.png" alt="LinkedIn" />LinkedIn</a></li>
+                    <!-- <li><a href="#"><img src="img/social/flickr.png" alt="Flickr" />Flickr</a></li> -->
+                    <!-- <li><a href="#"><img src="img/social/behance.png" alt="Behance" />Behance</a></li> -->
+                    <!-- <li><a href="#"><img src="img/social/dribbble.png" alt="Dribbble" />Dribbble</a></li> -->
+                    <!-- <li><a href="#"><img src="img/social/forrst.png" alt="Forrst" />Forrst</a></li> -->
+                    <!-- <li><a href="#"><img src="img/social/deviantart.png" alt="DeviantArt" />DeviantArt</a></li> -->
+                </ul>
 
-    <h2>Objective</h2>
-    <p> {{ site.data.resume.objective.text }}</p>
+                <div class="cBoth"></div>
+              </div>
 
-    <hr/>
+            </div>
+            <!-- My projects tab -->
+            <div>
+              <!-- root element for scrollable -->
+              <div class="scrollable vertical">
+                <!-- root element for the scrollable elements -->
+                 <div class="items">
+                  <!-- first element. contains three rows -->
+                  <div class="section">
+                    <!-- first row -->
+                    <div class="item freebie">
 
-    <h2>Skills Focus and Technical Expertise</h2>
+                      <a href=""><img src="img/project1.jpg" alt="Project name" class="projectThumb" /></a>
 
-    {% for skill in site.data.resume.skills %}
+                      <div class="table">
+                        <ul class="projectInfo">
+                          <li><a href="projects/project1.html" rel="#overlay"><img src="img/view.png" alt="View bigger" /></a></li>
+                          <li><a href="#"><img src="img/download.png" alt="Download" /></a></li>
+                          <li><a href="#"><img src="img/link.png" alt="View Live" /></a></li>
+                        </ul>
+                      </div>
 
-    <h5>{{ skill.name }}</h5>
-    {% for item in skill.items %}
-    <span class="label label-default skills"> {{ item.name }} </span>
-    {% endfor %}
+                    </div>
+                    <div class="item">
 
-    {% endfor %}
+                      <a href=""><img src="img/project1.jpg" alt="Project name" class="projectThumb" /></a>
 
-    <hr/>
+                      <div class="table">
+                        <ul class="projectInfo">
+                          <li><a href="projects/project2.html" rel="#overlay"><img src="img/view.png" alt="View bigger" /></a></li>
+                          <li><a href="#"><img src="img/link.png" alt="View Live" /></a></li>
+                        </ul>
+                      </div>
 
-    <h2>Professional Experience</h2>
+                    </div>
+                    <div class="item">
 
-    {% for item in site.data.resume.professional %}
-    <div class="row">
-        <div class="col-xs-6 nohref"><h3><a href="{{ item.link }}"><strong>{{ item.name }}</strong></a>
-        </h3>
+                      <a href=""><img src="img/project1.jpg" alt="Project name" class="projectThumb" /></a>
+
+                      <div class="table">
+                        <ul class="projectInfo">
+                          <li><a href="projects/project3.html" rel="#overlay"><img src="img/view.png" alt="View bigger" /></a></li>
+                          <li><a href="#"><img src="img/link.png" alt="View Live" /></a></li>
+                        </ul>
+                      </div>
+
+                    </div>
+                    <!-- IMPORTANT -->
+                    <div class="cBoth"></div>
+                  </div>
+
+                  <!-- second element. contains three rows -->
+                  <div class="section">
+                    <div class="item">
+
+                      <a href=""><img src="img/project1.jpg" alt="Project name" class="projectThumb" /></a>
+
+                      <div class="table">
+                        <ul class="projectInfo">
+                          <li class="oneBtn"><a href="projects/project4.html" rel="#overlay"><img src="img/view.png" alt="View bigger" /></a></li>
+                        </ul>
+                      </div>
+
+                    </div>
+                    <div class="item freebie">
+
+                      <a href=""><img src="img/project2.jpg" alt="Project name" class="projectThumb" /></a>
+
+                      <div class="table">
+                        <ul class="projectInfo">
+                          <li><a href="projects/project1.html" rel="#overlay"><img src="img/view.png" alt="View bigger" /></a></li>
+                          <li><a href="#"><img src="img/download.png" alt="Download" /></a></li>
+                          <li><a href="#"><img src="img/link.png" alt="View Live" /></a></li>
+                        </ul>
+                      </div>
+
+                    </div>
+                    <div class="item">
+
+                      <a href=""><img src="img/project2.jpg" alt="Project name" class="projectThumb" /></a>
+
+                      <div class="table">
+                        <ul class="projectInfo">
+                          <li><a href="projects/project1.html" rel="#overlay"><img src="img/view.png" alt="View bigger" /></a></li>
+                          <li><a href="#"><img src="img/link.png" alt="View Live" /></a></li>
+                        </ul>
+                      </div>
+
+                    </div>
+                    <!-- IMPORTANT -->
+                    <div class="cBoth"></div>
+                  </div>
+
+                  <div class="section">
+                    <!-- first row -->
+                    <div class="item freebie">
+
+                      <a href=""><img src="img/project1.jpg" alt="Project name" class="projectThumb" /></a>
+
+                      <div class="table">
+                        <ul class="projectInfo">
+                          <li><a href="projects/project1.html" rel="#overlay"><img src="img/view.png" alt="View bigger" /></a></li>
+                          <li><a href="#"><img src="img/download.png" alt="Download" /></a></li>
+                          <li><a href="#"><img src="img/link.png" alt="View Live" /></a></li>
+                        </ul>
+                      </div>
+
+                    </div>
+                    <div class="item">
+
+                      <a href=""><img src="img/project1.jpg" alt="Project name" class="projectThumb" /></a>
+
+                      <div class="table">
+                        <ul class="projectInfo">
+                          <li><a href="projects/project1.html" rel="#overlay"><img src="img/view.png" alt="View bigger" /></a></li>
+                          <li><a href="#"><img src="img/link.png" alt="View Live" /></a></li>
+                        </ul>
+                      </div>
+
+                    </div>
+                    <div class="item freebie">
+
+                      <a href=""><img src="img/project1.jpg" alt="Project name" class="projectThumb" /></a>
+
+                      <div class="table">
+                        <ul class="projectInfo">
+                          <li><a href="projects/project1.html" rel="#overlay"><img src="img/view.png" alt="View bigger" /></a></li>
+                          <li><a href="#"><img src="img/download.png" alt="Download" /></a></li>
+                          <li><a href="#"><img src="img/link.png" alt="View Live" /></a></li>
+                        </ul>
+                      </div>
+
+                    </div>
+                    <!-- IMPORTANT -->
+                    <div class="cBoth"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Prev - Next buttons -->
+              <div id="actions">
+                 <a class="prev">prev</a>
+                <p>*You can use keyboard arrows ( up/down ) to scroll trough gallery.</p>
+                 <a class="next">next</a>
+              </div>
+            </div>
+            <!-- Contact me tab -->
+            <div>
+
+              <div id="form" class="fl">
+                <!-- Contact Form -->
+                <form id="contact-form" action="javascript:alert('success!');">
+                  <ul>
+                    <li>
+                      <label for="name">Name</label>
+                      <input type="text" name="name" id="name" value="" placeholder="Your name">
+                    </li>
+                    <li>
+                      <label for="email">E-mail</label>
+                      <input type="text" name="email" id="email" value="" placeholder="Your e-mail">
+                    </li>
+                    <li>
+                      <label for="subject">Subject</label>
+                      <input type="text" name="subject" id="subject" value="" placeholder="What is it about">
+                    </li>
+                    <li>
+                      <textarea name="message" rows="5" cols="25" id="message" placeholder="Your text here"></textarea>
+                    </li>
+                    <li>
+                      <input type="submit" name="submit" value="Send" class="button">
+                    </li>
+                  </ul>
+                </form>
+                <!-- Error Messages will be displayed here -->
+                <div id="note"></div>
+              </div>
+
+              <div id="contactInfo" class="fl">
+                {{ site.data.about.map.url }}
+                <!-- <img src="http://maps.googleapis.com/maps/api/staticmap?center=Colorado+Springs,CO&zoom=10&size=202x142&sensor=false"> -->
+                <!-- <img src="img/map.jpg" alt="Map" /> -->
+
+                <ul class="infos fl">
+                  <li>Address: <span>{{ site.data.about.address.text }}</span></li>
+                  <li>Phone: <span>{{ site.data.about.phone.text }}</span></li>
+                  <li>My company: <a href="http://{{ site.data.about.home }}">{{ site.data.about.home }}</a><li>
+                  <li>vCard: <a href="#">Download my vCard</a></li>
+                </ul>
+
+              </div>
+              <div class="cBoth"></div>
+            </div>
+          </div>
         </div>
-        <div class="col-xs-6 text-right">
-            <h5><em>{{ item.start | date: "%b %Y" }} to {{ item.end | date: "%b %Y" }}</em></h5>
-            <h5>{{ item.location }}</h5>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <h4><em>{{ item.title }}</em></h4>
-
-            <p>{{ item.summary }}</p>
-
-            <br/>
-
-            <h4>Notable Projects:</h4>
-
-            {% for project in item.projects %}
-            {% if project.link %}
-            <h5><a href="{{ project.link }}"><strong>{{ project.name }}</strong></a></h5>
-            {% else %}
-            <h5><strong>{{ project.name }}</strong></h5>
-            {% endif %}
-
-            <p>{{ project.description }}</p>
-
-            <p> Applicable Skills:</p>
-
-            <p>
-                {% for skill in project.skills %}
-                <span class="label label-default skills"> {{ skill }} </span>
-                {% endfor %}
-            </p>
-            <br/>
-            {% endfor %}
-        </div>
-    </div>
-
-    <br/>
-    {% endfor %}
-
-    <hr/>
-
-    <h2>Education</h2>
-    {% for college in site.data.resume.education.colleges %}
-    <h3><a href="{{ college.link }}"><strong>{{ college.name }}</strong></a></h3>
-    <h4><em>{{ college.degree }}, {{ college.year }}</em></h4>
-    {% endfor %}
-
-    <hr/>
-
-    <h2>Certifications and Awards</h2>
-    {% for item in site.data.resume.certsAndAwards %}
-    <h4>{{ item.name }}, {{ item.year }}</h4>
-    {% endfor %}
-
-    <hr/>
-
-    <h2>Clearances</h2>
-    <h4>{{ site.data.resume.clearance.name }}</h4>
-
-    <hr/>
-
-    <ul>
-    {% for member in site.data.members %}
-      <li>
-        <a href="https://github.com/{{ member.github }}">
-          {{ member.name }}
-        </a>
-      </li>
-    {% endfor %}
-    </ul>
-
-</div>
-
-</body>
+        <script src="js/ajax.js"></script>
+        <script src="js/plugins.js"></script>
+    </body>
 </html>
